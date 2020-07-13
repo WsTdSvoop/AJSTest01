@@ -46,14 +46,19 @@ main{
 	width: 80%;
 	margin: 10px 0;
 }
+
+/**======================================================================
+  Index
+  =======================================================================**/
 .infoboxCurrency {
+
 	position: relative;
 	margin-left: 15px;
 	padding: 1.45rem;
-    background-color: #4a89dc;
-    border-top-left-radius: .25rem;
-    border-bottom-left-radius: .25rem;
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+	background-color: #4a89dc;
+	border-top-left-radius: .25rem;
+	border-bottom-left-radius: .25rem;
+	box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
 
 	float:left;
 	height:100px;
@@ -63,10 +68,10 @@ main{
 .infoboxValue {
 	position: relative;
 	padding: 1.45rem;
-    background-color: #fff;
-    border-top-right-radius: .25rem;
-    border-bottom-right-radius: .25rem;
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+	background-color: #fff;
+	border-top-right-radius: .25rem;
+	border-bottom-right-radius: .25rem;
+	box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
 	color: #2E2E2E;
 	font-weight: bold !important;
 	font-size: 1.2rem !important;
@@ -76,9 +81,9 @@ main{
 	min-width: 300px;
 }
 @media (max-width: 1000px) {
-  .infoboxValue {
-  	margin-left: 15px;
-  }
+	.infoboxValue {
+		margin-left: 15px;
+	}
 }
 .bitcoinCurrency {
 	color: #fff;
@@ -86,6 +91,49 @@ main{
 	font-size: 1.2rem !important;
 	text-transform: uppercase;
 	margin: 10px 0;
+}
+/**======================================================================
+  Details
+=======================================================================**/
+.bitcoinStats {
+	font-weight: bold !important;
+	font-size: 1.2rem !important;
+	margin: 10px 0;
+}
+.statsboxCurrency {
+
+	position: relative;
+	margin-left: 15px;
+	padding: 1.45rem;
+	background-color: #4a89dc;
+	border-top-left-radius: .25rem;
+	border-bottom-left-radius: .25rem;
+	box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+
+	float:left;
+	height:100px;
+	width: 30%;
+	min-width: 400px;
+}
+.statsboxValue {
+	position: relative;
+	padding: 1.45rem;
+	background-color: #fff;
+	border-top-right-radius: .25rem;
+	border-bottom-right-radius: .25rem;
+	box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+	color: #2E2E2E;
+	font-weight: bold !important;
+	font-size: 1.2rem !important;
+	float:left;
+	height:100px;
+	max-width: 65%;
+	min-width: 300px;
+}
+@media (max-width: 1100px) {
+	.statsboxValue {
+		margin-left: 15px;
+	}
 }
 /**======================================================================
   Footer
