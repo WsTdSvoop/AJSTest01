@@ -18,14 +18,75 @@
 /**======================================================================
 	General
   =======================================================================**/
+body {
+	font-family: 'Barlow', sans-serif !important;
+	font-weight: normal !important;
+	font-size: 1rem !important;
+    margin: 0;
+}
+h1,h2,h3 {
+	font-family: font-family: 'Barlow', sans-serif;
+	font-weight: bold;
+	margin: 0;
+}
 
 /**======================================================================
-	Header
+	Titel
   =======================================================================**/
+
 /**======================================================================
   Main
   =======================================================================**/
+main{
+	background: #eee;
+	width: 80%;
+	border-radius: 10px;
+}
+.priceRow {
+	width: 80%;
+	margin: 10px 0;
+}
+.infoboxCurrency {
+	position: relative;
+	margin-left: 15px;
+	padding: 1.45rem;
+    background-color: #4a89dc;
+    border-top-left-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
 
+	float:left;
+	height:100px;
+	width: 30%;
+	min-width: 300px;
+}
+.infoboxValue {
+	position: relative;
+	padding: 1.45rem;
+    background-color: #fff;
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+	color: #2E2E2E;
+	font-weight: bold !important;
+	font-size: 1.2rem !important;
+	float:left;
+	height:100px;
+	max-width: 65%;
+	min-width: 300px;
+}
+@media (max-width: 1000px) {
+  .infoboxValue {
+  	margin-left: 15px;
+  }
+}
+.bitcoinCurrency {
+	color: #fff;
+	font-weight: bold !important;
+	font-size: 1.2rem !important;
+	text-transform: uppercase;
+	margin: 10px 0;
+}
 /**======================================================================
   Footer
   =======================================================================**/
@@ -35,14 +96,7 @@
 /**======================================================================
   Animation
   =======================================================================**/
-body{
-  font-family: Helvetica;
-  margin: 0;
-}
 
-h1,h2,h3{
-  margin: 0;
-}
 
 .belt{
   padding: 5px 10px;
@@ -81,12 +135,7 @@ h1,h2,h3{
   color: #fff
 }
 
-main{
-  background: #eee;
-  width: 80%;
-  margin: 30px auto;
-  border-radius: 10px;
-}
+
 
 .content{
   padding: 20px;
@@ -157,9 +206,6 @@ main{
 }
 
 
-body {
-  font-size: .875rem;
-}
 
 .feather {
   width: 16px;
