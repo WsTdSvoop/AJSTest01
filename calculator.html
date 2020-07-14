@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="app">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -12,8 +12,12 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700&display=swap" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js"></script>
 
-
+	<script>var test = document.getElementById('test');
+test.onclick = function() {
+    console.log('Hello');
+} </script>
 	</head>
   	<body>
 
@@ -60,64 +64,48 @@
 	            	<h1 class="h2">Dashboard</h1>
 	          	</div>
 
+				<a href="#" onClick="(function(){
+    							console.log(tempWert);
+							})();">click here</a>
+
 				<!-- Bitcoin Details-->
 				<div class="row">
 
-					<!-- Marktkapitalisierung-->
+					<<!-- Währung 01 -->
 					<div class="priceRow">
-					  <div class="statsboxCurrency">
-							  <div class="bitcoinCurrency">Marktkapitalisierung:</div>
+					  <div class="infoboxCurrency">
+							  <div class="bitcoinCurrency">Bitcoin Preis (EUR)</div>
 					  </div>
-					  <div class="statsboxValue">
-							  <div id="marketcapStats" class="bitcoinStats"> </div>
-					  </div>
-					</div>
-					<!-- Anzahl aller Bitcoins im Umlauf-->
-					<div class="priceRow">
-					  <div class="statsboxCurrency">
-							  <div class="bitcoinCurrency">Anzahl Bitcoins im Umlauf:</div>
-					  </div>
-					  <div class="statsboxValue">
-							  <div id="totalbcStats" class="bitcoinStats"> </div>
-					  </div>
-					</div>
-					<!-- Anzahl der Transaktionen in den letzten 24h-->
-					<div class="priceRow">
-					  <div class="statsboxCurrency">
-							  <div class="bitcoinCurrency">Anzahl Transaktionen 24h:</div>
-					  </div>
-					  <div class="statsboxValue">
-							  <div id="daytransactioncountStats" class="bitcoinStats"> </div>
-					  </div>
-					</div>
-					<!-- Anzahl gesendeter Bitcoin in den letzten 24h-->
-					<div class="priceRow">
-					  <div class="statsboxCurrency">
-							  <div class="bitcoinCurrency">Anzahl gesendeter Bitcoin 24h:</div>
-					  </div>
-					  <div class="statsboxValue">
-							  <div id="daybtcsentStats" class="bitcoinStats"> </div>
-					  </div>
-					</div>
-					<!-- Aktuelle Hashrate-->
-					<div class="priceRow">
-					  <div class="statsboxCurrency">
-							  <div class="bitcoinCurrency">Aktuelle Hashrate:</div>
-					  </div>
-					  <div class="statsboxValue">
-							  <div id="hashrateStats" class="bitcoinStats"> </div>
-					  </div>
-					</div>
-					<!-- Aktueller Schwierigkeitsgrad-->
-					<div class="priceRow">
-					  <div class="statsboxCurrency">
-							  <div class="bitcoinCurrency">Aktueller Schwierigkeitsgrad:</div>
-					  </div>
-					  <div class="statsboxValue">
-							  <div id="getdifficultyStats" class="bitcoinStats"> </div>
+					  <div class="infoboxValue">
+							  <div id="rechenzahl" class=""></div>
 					  </div>
 					</div>
 
+					<div ng-controller="mainCtrl" >
+					<input type="number" ng-model="values.first" ng-change="doCalculations(sign, values.first, values.second)">
+
+					<p type="number" ng-model="values.second" ng-change="doCalculations(sign, values.first, values.second)">
+						= {{result}} Bitcoins
+					</div>
+
+					<!--<div ng-controller="mainCtrl">
+					<input type="number" ng-model="values.first" ng-change="doCalculations(sign, values.first, values.second)">
+
+					<p type="number" ng-model="values.second" ng-change="doCalculations(sign, values.first, values.second)">
+						= {{result}} Bitcoins
+					</div>-->
+
+					<!--<div ng-controller="mainCtrl">
+				    <input type="number" ng-model="values.first" ng-change="doCalculations(sign, values.first, values.second)">
+				        <select ng-model="sign" ng-change="doCalculations(sign, values.first, values.second)">
+				            <option value="+">+
+				            <option value="-">-
+				            <option value="*">*
+				            <option value="/">/
+				        </select>
+				    <input type="number" ng-model="values.second" ng-change="doCalculations(sign, values.first, values.second)">
+				        = {{result}}
+					</div>-->
 
 				</div>
 
@@ -260,9 +248,8 @@
 	    <script src="js/bootstrap.bundle.js"></script>
 	    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
 	    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
-	    <script src="js/angular.min.js"></script>
 	    <script src="js/ui-bootstrap-tpls-2.5.0.min.js"></script>
-	    <script src="js/details.js"></script>
+		<script src="js/calculator.js"></script>
 	    <script src="js/chart.js"></script>
 	  </body>
 </html>
